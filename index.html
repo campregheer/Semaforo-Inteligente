@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semáforo Inteligente</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <header>
+        <h1><i class="fas fa-traffic-light"></i> Semáforo Inteligente</h1>
+        <p>Controle e monitore o semáforo em tempo real</p>
+    </header>
+
+    <main class="main-container">
+        <section class="semaforo-container">
+            <div class="semaforo-pole"></div>
+            <section id="semaforo" class="semaforo-box">
+                <div class="light-container">
+                    <div id="red" class="light"></div>
+                    <div class="light-label">PARE</div>
+                </div>
+                <div class="light-container">
+                    <div id="yellow" class="light"></div>
+                    <div class="light-label">ATENÇÃO</div>
+                </div>
+                <div class="light-container">
+                    <div id="green" class="light"></div>
+                    <div class="light-label">SIGA</div>
+                </div>
+            </section>
+        </section>
+
+        <section class="control-panel">
+            <h2><i class="fas fa-gamepad"></i> Painel de Controle</h2>
+            
+            <div class="main-controls">
+                <button id="startButton" class="btn btn-start">
+                    <i class="fas fa-play"></i> Iniciar
+                </button>
+                <button id="stopButton" class="btn btn-stop">
+                    <i class="fas fa-stop"></i> Parar
+                </button>
+            </div>
+
+            <div class="manual-controls">
+                <h3>Controle Manual</h3>
+                <div class="manual-buttons">
+                    <button id="btnRed" class="btn btn-red">
+                        <i class="fas fa-circle"></i> Vermelho
+                    </button>
+                    <button id="btnYellow" class="btn btn-yellow">
+                        <i class="fas fa-circle"></i> Amarelo
+                    </button>
+                    <button id="btnGreen" class="btn btn-green">
+                        <i class="fas fa-circle"></i> Verde
+                    </button>
+                </div>
+            </div>
+
+            <div class="interval-control">
+                <h3><i class="fas fa-clock"></i> Intervalo de Tempo</h3>
+                <div class="slider-container">
+                    <span class="slider-label">Rápido</span>
+                    <div class="range-wrapper">
+                        <span id="bubble" class="bubble">1000ms</span>
+                        <input type="range" id="IntervalRange" min="500" max="5000" step="100" value="1000">
+                    </div>
+                    <span class="slider-label">Lento</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Semáforo Inteligente - Desenvolvido com ❤️</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
